@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react'
 
 const ItemListContainer = ({ greeting }) => {
-
-
 
   return (
   <>
