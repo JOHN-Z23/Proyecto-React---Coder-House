@@ -3,6 +3,7 @@ import './App.css';
 import NavBarExample from './componentes/NavBar';
 import Contacto from './diseño/contacto';
 import Ofertas from './diseño/ofertas';
+import ItemListContainer from './diseño/ItemListContainer';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 <Routes>
   <Route path='/' element={ <NavBarExample /> }>
     <Route index element={ <>
+      <ItemListContainer greeting={'Productos de Ferre Global'}/> 
     </>} />
     <Route path='ofertas' element={ <Ofertas /> } />
     <Route path='contacto' element={ <Contacto /> } />
