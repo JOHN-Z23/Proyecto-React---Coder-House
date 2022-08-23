@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ItemCount({inicial, max}) {
+export default function ItemCount({inicial, max, onAdd}) {
   const [count, setCount] = useState(inicial)
   
   const sumar = () => {
@@ -19,7 +19,8 @@ export default function ItemCount({inicial, max}) {
        <h5>{count}</h5>
        <button className="btn btn-quaternary" onClick={sumar}>+</button>
        <button className="btn btn-quaternary" onClick={reset}>Reset</button>
-       <button className="btn btn-quaternary" onClick={restar}>-</button>
+       <button className="btn btn-quaternary" onClick={restar}>-</button><br></br>
+       <button className="btn btn-primary" onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
 
     </div>
   )
