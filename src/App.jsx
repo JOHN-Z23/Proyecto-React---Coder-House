@@ -4,6 +4,7 @@ import NavBarExample from './componentes/NavBar';
 import Contacto from './diseño/contacto';
 import Ofertas from './diseño/ofertas';
 import ItemListContainer from './diseño/ItemListContainer';
+import ItemCount from './diseño/ItemCount';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 <Routes>
   <Route path='/' element={ <NavBarExample /> }>
     <Route index element={ <>
-      <ItemListContainer greeting={'Productos de Ferre Global'}/> 
+      <ItemListContainer greeting={'Productos de Ferre Global'}/>
+      <ItemCount inicial={1} max={10}/>
     </>} />
     <Route path='ofertas' element={ <Ofertas /> } />
     <Route path='contacto' element={ <Contacto /> } />
