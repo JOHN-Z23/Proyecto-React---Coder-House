@@ -15,7 +15,7 @@ const NavBarExample = () => {
                 <Nav.Link as={Link} to="/ofertas">Ofertas</Nav.Link>
                 <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
             </Nav>
-           
+
             </Navbar.Collapse>
             <CartWidget items= {4}/>
         </Container>

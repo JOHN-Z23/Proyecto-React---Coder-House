@@ -17,7 +17,6 @@ function App() {
   <Route path='/' element={ <NavBarExample /> }>
     <Route index element={ <>
       <ItemListContainer greeting={'Productos de Ferre Global'}/>
-      <ItemCount inicial={1} max={10}/>
     </>} />
     <Route path='ofertas' element={ <Ofertas /> } />
     <Route path='contacto' element={ <Contacto /> } />
