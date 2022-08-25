@@ -1,27 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-export default function ItemCount({inicial, max, onAdd}) {
-  const [count, setCount] = useState(inicial)
-  
+export default function ItemCount({ inicial, max, onAdd }) {
+  const [count, setCount] = useState(inicial);
+
   const sumar = () => {
-    count < max ?  setCount(count + 1) : alert ("No puede agregar mas al carrito")
-  }
+    count < max
+      ? setCount(count + 1)
+      : alert("No puede agregar mas al carrito");
+  };
   const restar = () => {
-    count > inicial ? setCount(count - 1) : alert ("No puedes quitar mas productos")
-  }
+    count > inicial
+      ? setCount(count - 1)
+      : alert("No puedes quitar mas productos");
+  };
   const reset = () => {
-   setCount(inicial)
-  }
+    setCount(inicial);
+  };
 
   return (
     <div className="botonesCarrito">
-
-       <h5>{count}</h5>
-       <button className="btn btn-quaternary" onClick={sumar}>+</button>
-       <button className="btn btn-quaternary" onClick={reset}>Reset</button>
-       <button className="btn btn-quaternary" onClick={restar}>-</button><br></br>
-       <button className="btn btn-primary" onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
-
+      <h5>{count}</h5>
+      <button className="btn btn-quaternary" onClick={sumar}>
+        +
+      </button>
+      <button className="btn btn-quaternary" onClick={reset}>
+        Reset
+      </button>
+      <button className="btn btn-quaternary" onClick={restar}>
+        -
+      </button>
+      <br></br>
+      <button
+        className="btn btn-primary"
+        onClick={() => {
+          onAdd(count);
+          reset();
+        }}
+      >
+        Agregar al carrito
+      </button>
     </div>
-  )
+  );
 }

@@ -1,13 +1,16 @@
-import Item from './Item'
+import Item from "./Item";
 
-const ItemList = ({product})=> {
+const ItemList = ({ product }) => {
   return (
-      <>
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-        {product?.map(product => <Item key={product.id} product={product}/>)}
-    </div>
-    
-     </>
-  )
-}
-export default ItemList
+    <>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
+        {product?.map((product) => (
+          <Item key={product.id} product={product} />
+        ))}
+      </div>
+    </>
+  );
+};
+export default ItemList;
