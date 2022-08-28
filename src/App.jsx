@@ -15,7 +15,7 @@ function App() {
               index
               element={
                 <>
-                  <ItemListContainer greeting={"Productos de Ferre Global"} />
+                  <ItemListContainer greeting={"Productos de Ferre Global"}/>
                 </>
               }
             />
