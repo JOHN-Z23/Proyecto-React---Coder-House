@@ -19,7 +19,7 @@ function App() {
                 </>
               }
             />
-            <Route path="ofertas" element={<Ofertas />} />
+            <Route path="ofertas" element={<Ofertas  />} />
             <Route path="contacto" element={<Contacto />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </Route>
